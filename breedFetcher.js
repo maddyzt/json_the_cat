@@ -11,16 +11,13 @@ request(newUrl, (error, response, body) => {
   }
 
   const data = JSON.parse(body);
+
+
   if (!data[0]) {
     console.log('breed not found');
   } else {
     for (let i of data) {
-      console.log(i);
+      console.log(i.description);
     }
   }
-
-
-
-
-
 });
