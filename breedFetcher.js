@@ -8,12 +8,18 @@ request(newUrl, (error, response, body) => {
   if (error) {
     console.log("error: ", error);
   };
-  
-  const data = JSON.parse(body);
 
-  for (let i of data) {
-    console.log(i);
-  };
+  const data = JSON.parse(body);
+  if(!data[0]) {
+    console.log('breed not found');
+  } else {
+    for (let i of data) {
+      console.log(i);
+    };
+  }; 
+
+
+
 
 
 });
